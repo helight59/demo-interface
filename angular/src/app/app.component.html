@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <header>
+    <img class="logo" src="assets/img/logo.png"/>
+  </header>
+  <nav>
+    <div>Welcome back, {{usersService.user.name}}!</div>
+    <div class="align-center"><button><<</button> October 18, 2017 <button>>></button></div>
+    <div>
+      <div class="tools-list">
+        <button class="add-btn"></button>
+        <button class="search-btn"></button>
+        <button class="users-btn"></button>
+        <button class="settings-btn"></button>
+        <button class="logout-btn"></button>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <app-users-list></app-users-list>
+  </main>
+</div>
