@@ -1,0 +1,70 @@
+.users-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.user-item {
+    border-radius: 8px;
+    background-color: #203864;
+    color: #fff;
+    font-size: 12px;
+    border: 1px #000 solid;
+    padding: 8px;
+    height: auto;
+}
+
+.user-item.bg-aqua {
+    background-color: #00b0f0;
+}
+
+.user-item.bg-red {
+    background-color: #e8492d;
+}
+
+.user-item.bg-green {
+    background-color: #5dd400;
+}
+
+.user-item p {
+    margin: 3px 0;
+}
+
+h3 {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.actions-list {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 6px;
+}
+
+.edit-btn {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../../assets/img/pencil.png");
+    width: 14px;
+    height: 14px;
+    display: block;
+    margin: 0 5px;
+}
+
+.remove-btn {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../../assets/img/trash.png");
+    width: 14px;
+    height: 14px;
+    display: block;
+    margin: 0 5px;
+}

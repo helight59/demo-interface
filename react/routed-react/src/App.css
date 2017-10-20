@@ -1,0 +1,114 @@
+html {
+  background-color: #e7e6e6;
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.wrapper {
+  color: #203864;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 1020px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.logo {
+  margin: 0 auto;
+  position: relative;
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px #203864 solid;
+  padding-bottom: 12px;
+  margin-top: 16px;
+}
+
+nav>* {
+  width: calc(100% / 3);
+}
+
+.tools-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.add-btn {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("./assets/img/plus.png");
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin: 0 5px;
+}
+
+.search-btn {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("./assets/img/search.png");
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin: 0 5px;
+}
+
+.users-btn {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("./assets/img/users.png");
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin: 0 5px;
+}
+
+.settings-btn {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("./assets/img/settings.png");
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin: 0 5px;
+}
+
+.logout-btn {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("./assets/img/logout.png");
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin: 0 5px;
+}
