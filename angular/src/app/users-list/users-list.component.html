@@ -1,20 +1,24 @@
 <div class="users-list">
-  <div *ngFor="let user of users"
-       class="user-item"
-       [ngClass]="{
-       'bg-green':user.admin,
-       'bg-aqua':user.manager,
-       'bg-red':user.superman
+  <ng-container *ngIf="users">
+    <div *ngFor="let user of users"
+         class="user-item"
+         [ngClass]="{
+       'bg-green':user.Status === 'Assured',
+       'bg-aqua':user.Status === 'In Progress',
+       'bg-red':user.Status === 'Non-Complient',
+       'bg-gray':user.Status === 'Pending'
        }">
-    <h3>{{user.name}}</h3>
-    <p>Phone: {{user.phone}}</p>
-    <p>Email: {{user.email}}</p>
-    <br>
-    <p>Driver: {{user.driver}}</p>
-    <p>Phone: {{user.phoneDriver}}</p>
-    <div class="actions-list">
-      <button class="edit-btn"></button>
-      <button (click)="removeFromArray(users, user)" class="remove-btn"></button>
+      <h3>{{user.Shipper}}</h3>
+      <p>B.O.L.: {{user.BOL}}</p>
+      <p>Phone: {{user.Phone}}</p>
+      <p>Email: {{user.Email}}</p>
+      <br>
+      <p>Driver: {{user.Driver}}</p>
+      <p>Phone: {{user.DriverPhone}}</p>
+      <div class="actions-list">
+        <button class="edit-btn"></button>
+        <button (click)="removeFromArray(users, user)" class="remove-btn"></button>
+      </div>
     </div>
-  </div>
+  </ng-container>
 </div>

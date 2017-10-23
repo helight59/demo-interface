@@ -15,7 +15,7 @@ import { UsersService } from './users.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]

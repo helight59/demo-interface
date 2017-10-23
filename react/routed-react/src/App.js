@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from './assets/img/logo.png';
 import './App.css';
-import usersJSON from './users.json';
 import UsersList from './components/UsersList/UsersList'
 
 class App extends Component {
@@ -10,8 +9,7 @@ class App extends Component {
 		this.state = {
 			user: {
 				name: 'Nick',
-			},
-			users: usersJSON
+			}
 		};
 	};
 
@@ -20,7 +18,7 @@ class App extends Component {
 		return (
 			<div className="wrapper">
 				<header>
-					<img className="logo" src={logo}/>
+					<img className="logo" src={logo} alt=""/>
 				</header>
 				<nav>
 					<div>Welcome back, {this.state.user.name}!</div>
@@ -40,7 +38,7 @@ class App extends Component {
 					</div>
 				</nav>
 				<main>
-					<UsersList users={this.state.users}/>
+					<UsersList/>
 				</main>
 			</div>
 

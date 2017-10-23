@@ -15,7 +15,11 @@ export class UsersListComponent implements OnInit {
   }
 
   ngOnInit() {
-    setTimeout(() => this.users = this.usersService.getUsers(), 1000);
+    this.usersService.getUsers().subscribe( result => {
+      this.users = result;
+    });
+
+    //setTimeout(() => this.users = this.usersService.getUsers(), 1000);
   }
 
 

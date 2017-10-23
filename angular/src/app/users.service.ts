@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class UsersService {
@@ -9,7 +11,7 @@ export class UsersService {
       email      : 'vanillajs@mail.com',
       driver     : 'Joe West',
       phoneDriver: '84842-1234-78',
-      admin: true
+      admin      : true
     },
     {
       name       : 'Bob Smith',
@@ -38,7 +40,7 @@ export class UsersService {
       email      : 'vanillajs@mail.com',
       driver     : 'Joe West',
       phoneDriver: '84842-1234-78',
-      manager: true
+      manager    : true
     },
     {
       name       : 'Bob Smith1',
@@ -60,7 +62,7 @@ export class UsersService {
       email      : 'vanillajs@mail.com',
       driver     : 'Joe West',
       phoneDriver: '84842-1234-78',
-      superman: true
+      superman   : true
     },
     {
       name       : 'Bob Smith4',
@@ -68,38 +70,19 @@ export class UsersService {
       email      : 'vanillajs@mail.com',
       driver     : 'Joe West',
       phoneDriver: '84842-1234-78'
-    },{
+    }, {
       name       : 'Bob Smith5',
       phone      : '4879 4578 12',
       email      : 'vanillajs@mail.com',
       driver     : 'Joe West',
       phoneDriver: '84842-1234-78'
-    },{
+    }, {
       name       : 'Bob Smith',
       phone      : '4879 4578 12',
       email      : 'vanillajs@mail.com',
       driver     : 'Joe West',
       phoneDriver: '84842-1234-78'
-    },{
-      name       : 'Bob Smith',
-      phone      : '4879 4578 12',
-      email      : 'vanillajs@mail.com',
-      driver     : 'Joe West',
-      phoneDriver: '84842-1234-78'
-    },
-    {
-      name       : 'Bob Smith',
-      phone      : '4879 4578 12',
-      email      : 'vanillajs@mail.com',
-      driver     : 'Joe West',
-      phoneDriver: '84842-1234-78'
-    },{
-      name       : 'Bob Smith',
-      phone      : '4879 4578 12',
-      email      : 'vanillajs@mail.com',
-      driver     : 'Joe West',
-      phoneDriver: '84842-1234-78'
-    },{
+    }, {
       name       : 'Bob Smith',
       phone      : '4879 4578 12',
       email      : 'vanillajs@mail.com',
@@ -112,14 +95,13 @@ export class UsersService {
       email      : 'vanillajs@mail.com',
       driver     : 'Joe West',
       phoneDriver: '84842-1234-78'
-    },
-    {
+    }, {
       name       : 'Bob Smith',
       phone      : '4879 4578 12',
       email      : 'vanillajs@mail.com',
       driver     : 'Joe West',
       phoneDriver: '84842-1234-78'
-    },{
+    }, {
       name       : 'Bob Smith',
       phone      : '4879 4578 12',
       email      : 'vanillajs@mail.com',
@@ -139,13 +121,7 @@ export class UsersService {
       email      : 'vanillajs@mail.com',
       driver     : 'Joe West',
       phoneDriver: '84842-1234-78'
-    },{
-      name       : 'Bob Smith',
-      phone      : '4879 4578 12',
-      email      : 'vanillajs@mail.com',
-      driver     : 'Joe West',
-      phoneDriver: '84842-1234-78'
-    },{
+    }, {
       name       : 'Bob Smith',
       phone      : '4879 4578 12',
       email      : 'vanillajs@mail.com',
@@ -165,7 +141,33 @@ export class UsersService {
       email      : 'vanillajs@mail.com',
       driver     : 'Joe West',
       phoneDriver: '84842-1234-78'
-    },{
+    }, {
+      name       : 'Bob Smith',
+      phone      : '4879 4578 12',
+      email      : 'vanillajs@mail.com',
+      driver     : 'Joe West',
+      phoneDriver: '84842-1234-78'
+    }, {
+      name       : 'Bob Smith',
+      phone      : '4879 4578 12',
+      email      : 'vanillajs@mail.com',
+      driver     : 'Joe West',
+      phoneDriver: '84842-1234-78'
+    },
+    {
+      name       : 'Bob Smith',
+      phone      : '4879 4578 12',
+      email      : 'vanillajs@mail.com',
+      driver     : 'Joe West',
+      phoneDriver: '84842-1234-78'
+    },
+    {
+      name       : 'Bob Smith',
+      phone      : '4879 4578 12',
+      email      : 'vanillajs@mail.com',
+      driver     : 'Joe West',
+      phoneDriver: '84842-1234-78'
+    }, {
       name       : 'Bob Smith',
       phone      : '4879 4578 12',
       email      : 'vanillajs@mail.com',
@@ -187,12 +189,14 @@ export class UsersService {
     email      : 'vanillajs@mail.com',
     driver     : 'Joe West',
     phoneDriver: '84842-1234-78',
-    admin: true
+    admin      : true
   };
 
-  constructor() { }
+  constructor(private http: Http) {
+  }
 
   getUsers() {
-    return this.users;
+    return this.http.get('http://ppswtest.azurewebsites.net/api/values')
+               .map(res => res.json());
   }
 }
